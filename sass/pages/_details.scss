@@ -90,7 +90,7 @@
 		}
 		&__total {
 			display: grid;
-			grid-template-columns: 50px 1fr 1fr;
+			grid-template-columns: auto auto 1fr;
 			&-name {
 			}
 			&-dots {
@@ -112,7 +112,7 @@
 .btn {
 	background: #333;
 	color: #fff;
-	padding: 10px 20px;
+	padding: 10px 40px;
 	font-size: 25px;
 	border-radius: 7px;
 	margin: 5px 0;
