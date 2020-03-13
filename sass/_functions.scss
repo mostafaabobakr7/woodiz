@@ -1,0 +1,80 @@
+@function map-collect($maps...) {
+	$collection: ();
+
+	@each $map in $maps {
+		$collection: map-merge($collection, $map);
+	}
+	@return $collection;
+}
+
+@function ends-with($string, $find) {
+	@return str-slice($string, (str-length($string) - str-length($find) + 1)) == $find;
+}
+
+// ---------CSS VAR themes--------
+@function var($var, $fallBack: true) {
+	@return unquote('var(--#{$var})');
+}
+
+// THEME PALETTE ------------------------------------------------------
+@function rename($input, $str) {
+	// 	GET THE MAP OF DESIRED COLOR FROM SWATCHES MAP
+	$getmap: map-get($swatches, $input);
+	// 	CREATE MAP TO RETURN RESULT IN
+	$map: ();
+	$val-900: '';
+	$val-800: '';
+	$val-700: '';
+	$val-600: '';
+	$val-500: '';
+	$val-400: '';
+	$val-300: '';
+	$val-200: '';
+	$val-100: '';
+	$val-000: '';
+	@each $key, $val in $getmap {
+		@if ends-with($key, '900') {
+			$val-900: $val;
+		}
+		@if ends-with($key, '800') {
+			$val-800: $val;
+		}
+		@if ends-with($key, '700') {
+			$val-700: $val;
+		}
+		@if ends-with($key, '600') {
+			$val-600: $val;
+		}
+		@if ends-with($key, '500') {
+			$val-500: $val;
+		}
+		@if ends-with($key, '400') {
+			$val-400: $val;
+		}
+		@if ends-with($key, '300') {
+			$val-300: $val;
+		}
+		@if ends-with($key, '200') {
+			$val-200: $val;
+		}
+		@if ends-with($key, '100') {
+			$val-100: $val;
+		}
+		@if ends-with($key, '000') {
+			$val-000: $val;
+		}
+		$map: (
+			#{$str}-9: $val-900,
+			#{$str}-8: $val-800,
+			#{$str}-7: $val-700,
+			#{$str}-6: $val-600,
+			#{$str}-5: $val-500,
+			#{$str}-4: $val-400,
+			#{$str}-3: $val-300,
+			#{$str}-2: $val-200,
+			#{$str}-1: $val-100,
+			#{$str}-0: $val-000
+		);
+	}
+	@return $map;
+}
