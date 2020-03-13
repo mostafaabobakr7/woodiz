@@ -1,3 +1,3 @@
 # WOODIZ
 
-![screenshot](https://raw.githubusercontent.com/mostafaabobakr7/woodiz/master/woodiz-screenshot.jpg)
+![screenshot](https://github.com/mostafaabobakr7/woodiz/blob/master/woodiz-screenshot.jpg)
