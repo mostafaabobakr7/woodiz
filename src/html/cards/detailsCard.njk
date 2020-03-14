@@ -1,0 +1,13 @@
+{% macro detailsCard(img="1", name='Activity 1') %}
+<div class="details__customize-card">
+  <img class="details__customize-card-image" src="./assets/images/{{img}}.png" alt="customize image" width="100"
+       height="100" />
+  <p class="details__customize-card-name">{{ name }}</p>
+  <div class="details__customize-card-number-wraper">
+    <button class="details__customize-card-number-btn-decrease">-</button>
+    <strong class="details__customize-card-number">0</strong>
+    <button class="details__customize-card-number-btn-increase">+</button>
+  </div>
+  <button class="details__customize-card-add btn">ADD</button>
+</div>
+{% endmacro %}

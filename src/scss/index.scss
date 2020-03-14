@@ -1,0 +1,15 @@
+// Basics
+@import './_variables.scss';
+@import './functions';
+@import './mixins';
+@import './addClass';
+@import './reset';
+@import './_icons.scss';
+// components
+
+// Pages
+@import './pages/home';
+@import './pages/details';
+
+// Print
+@import './_print.scss';

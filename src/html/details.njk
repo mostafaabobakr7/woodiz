@@ -1,0 +1,34 @@
+{% set title = "Details" %}
+{% extends './parts/_layout.njk' %}
+{% block body %}
+<main class="main">
+  <h1 class="main__header">Details</h1>
+  <div class="wraper">
+    <section class="section__details">
+      <div class="details__card">
+        <h2 class="details__kidName-wraper">
+          <span>KID NAME:</span>
+          <span class="details__kidName" datakidname="Mohamed Ahmed">Mohamed Ahmed</span>
+        </h2>
+        <h3 class="details__parentNumber-wraper">
+          <span>PARENT NUMBER :</span>
+          <span class="details__parentNumber" dataparentno="013123123212">013123123212</span>
+        </h3>
+        <button class="details__btn">EDIT</button>
+      </div>
+
+      <div class="details__customize-wraper">
+        {% from "./cards/detailsCard.njk" import "detailsCard" %}
+        {{detailsCard('1','Activity 1')}}
+        {{detailsCard('2','Activity 2')}}
+        {{detailsCard('3','Activity 3')}}
+      </div>
+    </section>
+    <section class="section__summery">
+      {% include "./parts/summeryColumn.njk" %}
+      <button class="btn">End Time</button>
+      <button class="btn">Print Recepiet</button>
+    </section>
+  </div>
+</main>
+{% endblock %}

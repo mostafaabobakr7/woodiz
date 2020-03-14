@@ -1,0 +1,16 @@
+{% set title = "Display Kids" %}
+{% extends './parts/_layout.njk' %}
+{% block body %}
+<main class="main">
+  <h1 class="main__header">Display Kids (Current Mode)</h1>
+  <section class="cards">
+    {% from "./cards/homeCard.njk" import "homeCard" %}
+    {{ homeCard('Matilda Figueroa','1957955712','1:01') }}
+    {{ homeCard('Chad Parks','2564185158','2:02') }}
+    {{ homeCard('Francis French','1035967383','3:03') }}
+    {{ homeCard('Vera George','45257324','4:04') }}
+    {{ homeCard('Jorge Estrada','1318327456','5:05') }}
+    {{ homeCard('Esther McKinney','1407216045','6:06') }}
+  </section>
+</main>
+{% endblock %}

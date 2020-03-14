@@ -1,0 +1,16 @@
+{% macro homeCard(name="Mohamed Ahmed", number='013123123212', hours="1:15") %}
+<article class="card">
+  <div class="flex__1">
+    <h2 class="card__name">{{ name }}</h2>
+    <p class="card__number-wraper">
+      <span>Parent Number:</span>
+      <span class="card__number">{{ number }}</span>
+    </p>
+  </div>
+  <div class="flex__2">
+    <i class="icon clock" title="Time"></i>
+    <h3 class="card__time">{{ hours }} Hrs</h3>
+  </div>
+  <a class="card__btn" href="./details.html">Add Activity</a>
+</article>
+{% endmacro %}
