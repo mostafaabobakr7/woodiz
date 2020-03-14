@@ -20,6 +20,7 @@
 	text-align: center;
 	display: grid;
 	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 65px;
 	transition: all 0.2s cubic-bezier(0.19, 1, 0.22, 1);
 	&:hover {
 		box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.6);
