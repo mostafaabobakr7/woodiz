@@ -76,7 +76,7 @@
 			min-height: 300px;
 			margin-bottom: 10px;
 			position: relative;
-			border: 3px solid #333;
+			box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 		}
 		&__logo {
@@ -90,8 +90,20 @@
 			font-weight: 900;
 			font-size: 20px;
 			text-align: center;
-			padding: 20px 0;
+			padding: 25px 0 5px 0;
 			text-transform: uppercase;
+		}
+		// Kid Info
+		&__kid-wraper {
+			display: flex;
+			justify-content: space-between;
+
+			.details__kidName-wraper,
+			.details__parentNumber-wraper {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
 		}
 		// Orders
 		&__order-wraper {
@@ -131,17 +143,49 @@
 		// kid details
 
 		// time
-		&__time-wraper {
-			margin: 15px 0 20px 0;
+		&__timing-wraper {
+			margin: 5px 0 20px 0;
+			display: flex;
+			justify-content: space-between;
+		}
+		&__timing-time-wraper,
+		&__timing-date-wraper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 	}
 }
 
 .btn {
-	background: #333;
+	background: #231f20;
 	color: #fff;
 	padding: 10px 60px;
 	font-size: 25px;
 	border-radius: 7px;
 	margin: 5px 0;
+	transition: all 0.2s ease-in-out;
+	opacity: 0.9;
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.btn-black {
+	background-color: #231f20;
+}
+.btn-gray {
+	background-color: #909090;
+}
+.btn-lemon {
+	background-color: #cbdb2a;
+}
+.btn-red {
+	background-color: #ec008c;
+}
+.btn-blue {
+	background-color: #00b9f2;
+}
+.btn-yellow {
+	background-color: #ffc709;
 }
