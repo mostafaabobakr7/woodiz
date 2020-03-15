@@ -1,4 +1,7 @@
 @media print {
+	.section__details .details__card {
+		width: 100% !important;
+	}
 	.details__customize-wraper {
 		display: none !important;
 	}

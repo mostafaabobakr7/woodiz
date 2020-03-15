@@ -51,7 +51,7 @@ const webpackProd = require("./webpack.prod.js");
 const srcHTML = "src/html/*.njk";
 const srcSASS = "src/scss/index.scss";
 const srcJS = "src/js/index.js";
-const srcIMG = "src/images/**/*";
+const srcIMG = "src/assets/images/**/*";
 
 const outSASS = "src/assets";
 const outJS = "src/assets";
@@ -63,7 +63,7 @@ const watchJS = "src/js/**/*.js";
 const destHTML = "docs";
 const destCSS = "docs/assets";
 const destJS = "docs/assets";
-const destIMG = "docs/img";
+const destIMG = "docs/assets/images";
 // ========================================
 const PORT = 7000;
 const PORT_BUILD = 7700;

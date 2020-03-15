@@ -1,35 +1,6 @@
 <div class="summery__wraper">
-  <p class="summery__header">Order Summery</p>
-
-  <div class="summery__order-wraper">
-    <h5 class="summery__order">
-      <span class="summery__order-number">1x</span>
-      <span class="summery__order-name">First Hour</span>
-      <span class="summery__order-dots">....</span>
-      <span class="summery__order-price">65 EGP</span>
-    </h5>
-    <h5 class="summery__order">
-      <span class="summery__order-number">2x</span>
-      <span class="summery__order-name">Additional Hours</span>
-      <span class="summery__order-dots">....</span>
-      <span class="summery__order-price">100 EGP</span>
-    </h5>
-    <h5 class="summery__order">
-      <span class="summery__order-number">1x</span>
-      <span class="summery__order-name">Activity 2</span>
-      <span class="summery__order-dots">....</span>
-      <span class="summery__order-price">40 EGP</span>
-    </h5>
-  </div>
-
-  <div class="summery__total-wraper">
-    <h3 class="summery__total">
-      <span class="summery__total-name">Total</span>
-      <span class="summery__total-dots">..................</span>
-      <span class="summery__total-price">205 EGP</span>
-    </h3>
-  </div>
-
+  <img class="summery__logo" src="./assets/images/logo.png" alt="logo" width="80">
+  <p class="summery__header">Order Receite</p>
   <div class="summery__kid-wraper">
     <p class="details__kidName-wraper">
       <span>Kid Name:</span>
@@ -40,7 +11,6 @@
       <span class="details__parentNumber" dataparentno="013123123212">013123123212</span>
     </p>
   </div>
-
   <div class="summery__time-wraper">
     <p class="summery__time-start-wraper">
       <span>Start Time:</span>
@@ -54,5 +24,17 @@
       <span>Date:</span>
       <span class="summery__time-date" data-endtime="25-12-2020">25-12-2020</span>
     </p>
+  </div>
+  <div class="summery__order-wraper">
+    {% from "./_summeryOrder.njk" import "summeryOrder" %}
+    {{summeryOrder('1', 'First Hour', '65')}}
+    {{summeryOrder('2','Additional Hours','100')}}
+    {{summeryOrder('1','Activity 2','40')}}
+  </div>
+  <div class="summery__total-wraper">
+    <h3 class="summery__total">
+      <span class="summery__total-name">Total</span>
+      <span class="summery__total-price">205 EGP</span>
+    </h3>
   </div>
 </div>

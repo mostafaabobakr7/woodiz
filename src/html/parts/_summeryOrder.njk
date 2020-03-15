@@ -1,0 +1,7 @@
+{% macro summeryOrder(amount='1', name='First Hour', price='65') %}
+<h5 class="summery__order">
+  <span class="summery__order-number">{{ amount }}x</span>
+  <span class="summery__order-name">{{ name }}</span>
+  <span class="summery__order-price">{{price}} EGP</span>
+</h5>
+{% endmacro %}

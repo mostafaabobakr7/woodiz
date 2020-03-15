@@ -1,6 +1,7 @@
 .wraper {
 	display: flex;
-	padding: 25px 50px;
+	flex-wrap: wrap;
+	padding: 5px 50px;
 }
 .section__details {
 	flex: 2;
@@ -8,6 +9,12 @@
 		&__card {
 			position: relative;
 			width: 50%;
+		}
+		&__kidName-wraper {
+		}
+		&__parentNumber-wraper {
+			color: #797979;
+			font-size: 17px;
 		}
 		&__btn {
 			position: absolute;
@@ -21,9 +28,10 @@
 		&__customize {
 			&-wraper {
 				margin: 30px 0;
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr;
-				grid-gap: 20px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-around;
+				align-items: center;
 			}
 			&-card {
 				text-align: center;
@@ -63,24 +71,34 @@
 	flex-direction: column;
 	.summery {
 		&__wraper {
-			padding: 5px;
-			min-width: 250px;
+			padding: 10px;
+			min-width: 300px;
 			min-height: 300px;
-			border: 2px solid #333;
 			margin-bottom: 10px;
+			position: relative;
+			border: 3px solid #333;
+			border-radius: 5px;
+		}
+		&__logo {
+			filter: grayscale(1);
+			margin: auto;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
 		}
 		&__header {
 			font-weight: 900;
 			font-size: 20px;
 			text-align: center;
 			padding: 20px 0;
+			text-transform: uppercase;
 		}
 		// Orders
 		&__order-wraper {
 		}
 		&__order {
 			display: grid;
-			grid-template-columns: 30px 1fr 30px 60px;
+			grid-template-columns: 30px 1fr auto;
 			&-number {
 			}
 			&-name {
@@ -96,11 +114,11 @@
 		&__total-wraper {
 			border-top: 1px dashed #333;
 			padding: 5px 0;
-			margin: 30px 0;
+			margin: 10px 0;
 		}
 		&__total {
-			display: grid;
-			grid-template-columns: auto auto 1fr;
+			display: flex;
+			justify-content: space-between;
 			&-name {
 			}
 			&-dots {
@@ -114,7 +132,7 @@
 
 		// time
 		&__time-wraper {
-			margin: 20px 0 5px 0;
+			margin: 15px 0 20px 0;
 		}
 	}
 }
