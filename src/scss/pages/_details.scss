@@ -9,20 +9,15 @@
 		&__card {
 			position: relative;
 			width: 50%;
+			// display: flex;
+			// flex-wrap: wrap;
+			// justify-content: space-between;
 		}
 		&__kidName-wraper {
+			color: inherit;
 		}
 		&__parentNumber-wraper {
-			color: #797979;
-			font-size: 17px;
-		}
-		&__btn {
-			position: absolute;
-			top: 0;
-			right: 0;
-			border: 2px solid #333;
-			padding: 5px 10px;
-			font-weight: 900;
+			color: inherit;
 		}
 
 		&__customize {
@@ -76,7 +71,7 @@
 			min-height: 300px;
 			margin-bottom: 10px;
 			position: relative;
-			box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
+			box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
 			border-radius: 5px;
 		}
 		&__logo {
@@ -165,12 +160,17 @@
 	border-radius: 7px;
 	margin: 5px 0;
 	transition: all 0.2s ease-in-out;
-	opacity: 0.9;
+	opacity: 0.8;
 	&:hover {
 		opacity: 1;
 	}
 }
-
+.btn-sm {
+	font-size: 16px;
+	padding: 10px 20px;
+	color: #333;
+	font-weight: 900;
+}
 .btn-black {
 	background-color: #231f20;
 }

@@ -491,16 +491,10 @@ mark {
   .section__details .details__card {
     position: relative;
     width: 50%; }
+  .section__details .details__kidName-wraper {
+    color: inherit; }
   .section__details .details__parentNumber-wraper {
-    color: #797979;
-    font-size: 17px; }
-  .section__details .details__btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border: 2px solid #333;
-    padding: 5px 10px;
-    font-weight: 900; }
+    color: inherit; }
   .section__details .details__customize-wraper {
     margin: 30px 0;
     display: flex;
@@ -538,7 +532,7 @@ mark {
     min-height: 300px;
     margin-bottom: 10px;
     position: relative;
-    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.4);
     border-radius: 5px; }
   .section__summery .summery__logo {
     filter: grayscale(1);
@@ -591,9 +585,15 @@ mark {
   border-radius: 7px;
   margin: 5px 0;
   transition: all 0.2s ease-in-out;
-  opacity: 0.9; }
+  opacity: 0.8; }
   .btn:hover {
     opacity: 1; }
+
+.btn-sm {
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #333;
+  font-weight: 900; }
 
 .btn-black {
   background-color: #231f20; }
